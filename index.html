@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Awesome Chatops in Clojure</title>
+
+		<meta name="description" content="Awesome Chatops in Clojure with Yetibot">
+		<meta name="author" content="Victor Cleja">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="css/theme/blink.css" />
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}			
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+        <style type="text/css">
+            .reveal h6 {
+                text-transform: none;
+            }
+            .reveal .intro a:not(.image) {
+                color: #eee8d5;
+            }
+        </style>
+    </head>
+
+	<body>
+
+<div class="reveal">
+<div class="slides">
+			
+<section class="intro" data-background="images/negative_bots.jpg" data-transition="slide">
+</section>
+			
+<section data-background="#3F3F3F" class="intro" data-transition="slide">				
+	<h1>Yetibot</h1>
+	<h2>Doing awesome chatops in Clojure</h2>
+	<h2>(or) How this NGO's Fourth Hardest Worker Isn’t Human</h2>
+	<h4>by</h4>
+	<h5>Victor Cleja</h5>
+    <I><a target="_new" href="http://github.com/cvic">@cvic</a> </I><br/><br/>
+</section>
+
+<section data-background="#3F3F3F">
+<pre><code style="height: 300px; width: 850px;" data-trim>
+21:12 &lt;uberbot&gt; : !psearch   - PacketStorm file search
+21:12 &lt;uberbot&gt; : !sans      - SANS ISC SecNews Feed
+21:12 &lt;uberbot&gt; : !seen      - Last seen nick
+21:12 &lt;uberbot&gt; : !sf        - SecurityFocus.com Vuln Feed
+21:12 &lt;uberbot&gt; : !tld       - TLD expand
+21:12 &lt;uberbot&gt; : !uptime    - Uptime of uberbot
+21:12 &lt;uberbot&gt; : !whois     - Query whois records for dns/ip
+21:12 &lt;uberbot&gt; : !wiki      - Search Wikipedia.org
+21:12 &lt;uberbot&gt; : !yahoo     - Search Yahoo Answers
+21:12 &lt;uberbot&gt; : !youtube   - Search Youtube
+21:12 &lt;uberbot&gt; +- end of commands.
+--- Log closed Mon May 11 21:14:59 2009
+</code></pre>
+</section>
+				
+<section class="intro" data-background="#352145">				
+<p style="color: #D9D100;">code4romania_22_05_2017.pdf</p>
+<img style="border: none;" src="images/code4romania_-_year_1.png" width="1300">
+</section>
+				
+<section data-transition="slide" data-background="#D9D100" data-background-transition="slide">
+<h2 style="color: #352145;">What do we use?</h2>
+    <p class="fragment roll-in">
+    <img style="border: none;" src="images/slack.svg" height="200" width="500"/>   <img style="border: none;" src="images/github-icon-black.svg" width="200"/>
+	<img style="border: none;" src="images/JIRA_logo.svg" width="500"/>   <img style="border: none;" src="images/google.svg" height="251" width="200"/>
+    </p>
+</section>
+
+<section data-transition="slide" data-background="images/robot_head.jpg" data-background-transition="slide">
+	<h1 style="color: #000;">But...</h1>
+	<h1 style="color: #000;" class="fragment">W.T.F. is <span class="blink_chat" style="color: #ff0000;" class="fragment">Chat</span><span class="blink_ops" style="color: #00B3AC;" class="fragment">ops</span></h1>
+</section>
+							
+<section data-transition="slide" data-background="images/new_interface.png" data-background-transition="slide">
+</section>
+
+<section data-transition="slide" data-background-transition="slide">
+<h2>Yetibot @ eBay</h2>
+<ul>
+	<li class="fragment">Initial use cases were around memes and image lookups :-)</li>
+	<li class="fragment">Parse .pom files to show project versions and its dependencies so we could make sure we had the right dependencies deployed</li>
+	<li class="fragment">Config validation: an observer would poll S3 for a config file, validate it and report any errors</li>
+	<li class="fragment">Track Github statistics over time: total repository count, additions, deletions, changes</li>
+	<li class="fragment">JIRA integration: opening and commenting on issues, list what people are working on, search for a specific issue</li>
+	<li class="fragment">Use yetibot-stackstorm to control the Ansible automation for 2 clusters of 100 machines each</li>
+	<li class="fragment">Host a Github webhook to run Codeclimate on pull requests and report back if there were any issues</li>
+</ul>
+</section>				
+	
+<section class="intro" data-transition="slide">
+<h2>Yetibot excels at</h2>
+<ul>
+    <li class="fragment"><b>teaching</b>: how to run internal automation, language evaluation for JS, Scala, Clojure, and Haskell</i></li>
+    <li class="fragment"><b>productivity</b>: automating things around Jenkins, JIRA, running SSH commands on various servers, and interacting with internal APIs via private Yetibot plugins</li>
+    <li class="fragment"><b>fun</b>: Google image search, gif lookups, meme generation</li>
+</ul>
+</section>
+	
+<section class="intro" data-background="#2A474F"> 
+<h6 style="color: #00D4FF;">DEMO<span style="color: #00FF00;" class="blinking-cursor">►</span></h6>
+<img style="border: none;" src="images/yetibot_final.png" width="650">
+</section>
+
+<section data-background="#661100" class="intro">
+<h6 style="color: #ff4c4c;">Q&A</h6>
+<img style="border: none;" src="images/EQ9a6.gif" width="650">
+</section>
+
+<section data-background="#8C0400" data-transition="slide">
+	<img style="border: none;" src="images/final_slide.jpg" width="500">
+</section>
+
+<!---
+<section data-background="#3F3F3F">
+<pre><code data-trim>
+(defn obs-hook
+  "Pass a collection of event-types you're interested in and an observer
+   function that accepts a single arg. If an event occurs that matches the
+   events in your event-types arg, your observer will be called with the event's
+   json."
+  [event-types observer]
+  (rh/add-hook
+    #'yetibot.core.handler/handle-raw
+    (let [event-types (set event-types)]
+      (fn [callback chat-source user event-type body]
+        #_(debug "observed" (pr-str (map pr-str [chat-source user event-type body])))
+        (when (contains? event-types event-type)
+          (with-fresh-db
+            (observer {:chat-source chat-source
+                       :event-type event-type
+                       :user user
+                       :body body})))
+(callback chat-source user event-type body)))))
+</code></pre>
+</section>
+-->
+
+<section>
+<h2>External links</h2>
+    <ul>
+		<li><a target="_new" href="https://www.atlassian.com/blog/software-teams/what-is-chatops-adoption-guide">What is ChatOps? A guide to its evolution, adoption, and significance</a></li>
+		<li><a target="_new" href="https://getputpost.co/the-four-stages-of-chatops-79cc60fc38a">The Four Stages of ChatOps</a></li>        		
+		<li><a target="_new" href="http://www.oreilly.com/webops-perf/free/chatops.csp">ChatOps - Managing Operations in Group Chat</a></li>
+		<li><a target="_new" href="http://operable.io/cog.html">Here is how Cog measures up to Hubot and Lita</a></li>
+		<li><a target="_new" href="https://www.vividcortex.com/blog/8-reasons-why-chatops-isnt-working-at-your-company">8 Reasons Why ChatOps Isn't Working At Your Company</a></li>
+		<li><a target="_new" href="https://github.com/Chaosthebot/Chaos">A social coding experiment that updates its own code democratically</a></li>
+    </ul>
+</section>
+
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: false,
+				center: true,
+				slideNumber: true,
+
+				theme: 'moon', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+</script>
+
+	</body>
+</html>
